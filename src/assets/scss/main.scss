@@ -1,0 +1,58 @@
+@import "./_variables.scss";
+@import "./_utilities.scss";
+@import "./loaders.scss";
+
+body {
+  overscroll-behavior: none;
+  background-color: #e0b87e;
+  padding: 5%;
+}
+
+
+
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #e0b87e;
+  // background-color: var(--bs-page);
+}
+
+main {
+  flex-grow: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+#upgrades-available {
+  min-height: 10dvh;
+  border-right: 3px solid var(--mid-green);
+  border-left: 3px solid var(--mid-green);
+  border-bottom: 3px solid var(--mid-green);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.inner-shadow {
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.text-mid-green {
+  color: var(--mid-green);
+}
+
+.bg-lightest-green {
+  background-color: var(--lightest-green);
+}
+
+.bg-mid-green {
+  background-color: var(--mid-green);
+}
+
+.bg-tan {
+  background-color: var(--tan);
+}
