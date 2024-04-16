@@ -11,13 +11,19 @@ export const AppState = reactive({
 
   almonds: 0,
 
+  farm: {
+    harvestRate: 10,
+    shippingRate: 10,
+    seasonHarvest: 0,
+  },
+
   AutoUpgrades: [
     new AutoUpgrade({
       name: 'bees',
       emoji: '🐝',
       price: 50,
       quantity: 0,
-      multiplier: 1,
+      multiplier: .5,
       // automaticUpgrades[0].tier2.name
       // tier2: {
       //   name: 'bees',
@@ -33,7 +39,7 @@ export const AppState = reactive({
         emoji: '🌳',
         price: 75,
         quantity: 0,
-        multiplier: 2
+        multiplier: .25
       })
   ],
 
@@ -44,7 +50,7 @@ export const AppState = reactive({
       emoji: '🚜',
       price: 40,
       quantity: 0,
-      multiplier: 1.1
+      multiplier: 1
     }),
     new ClickUpgrade({
       name: 'trucks',

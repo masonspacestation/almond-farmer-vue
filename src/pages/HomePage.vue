@@ -14,10 +14,7 @@ function harvestAlmonds(){
   almondsService.harvestAlmonds()
 }
 
-function buyClickUpgrade(resource){
-  // console.log('buying', resource);
-  almondsService.buyClickUpgrade(resource)
-}
+
 
 
 
@@ -30,8 +27,8 @@ function buyClickUpgrade(resource){
 
 <template>
 <section class="row justify-content-center mt-3">
-    <div id="season" class="col-3">0</div>
-    <h2 class="text-center">Season Total {{ almonds }}</h2>
+    <div id="season" class="col-3">Season Total: {{ AppState.farm.seasonHarvest }}</div>
+    <h2 class="text-center">{{ almonds }} Almonds</h2>
   </section>
 
   <!-- <section class="row justify-content-center align-content-end">
@@ -51,19 +48,11 @@ function buyClickUpgrade(resource){
 
     <img id="harvest-button" @click="harvestAlmonds()" src="src/assets/img/farmer-emoji.png" alt="">
   </div>
-  <div class="row">
-    <button v-for="clickUpgrade in clickUpgrades" :key="clickUpgrade.name" @click="buyClickUpgrade(clickUpgrade.name)">+ {{ clickUpgrade.emoji }}</button>
-  </div>
-  <div class="row">
+<section class="container-fluid">
+  <div class="row bg-mid-green rounded">
     <ResourceTools/>
-    <!-- <div class="col-3 m-2" v-for="clickUpgrade in clickUpgrades" :key="clickUpgrade.name">
-      <div class="card p-3 d-flex text-center">
-        <h3 class="w-50 d-inline-block">{{clickUpgrade.quantity}} {{ clickUpgrade.emoji }}</h3>
-        <h3 class="w-50 d-inline-block">{{clickUpgrade.multiplier}}/<span class="fs-6">Click</span></h3>
-        <button @click="buyClickUpgrade(clickUpgrade)">+</button>
-    </div>
-  </div> -->
   </div>
+</section>
 </template>
 
 <style scoped lang="scss">

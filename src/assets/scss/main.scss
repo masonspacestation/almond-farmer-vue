@@ -2,6 +2,16 @@
 @import "./_utilities.scss";
 @import "./loaders.scss";
 
+
+:root {
+  --dark-green: #71873f;
+  --mid-green: #688557;
+  --lightest-green: #abbe99;
+  --brick: #a36627;
+  --brown: #9b7a4f;
+  --tan: #e0b87e;
+}
+
 body {
   overscroll-behavior: none;
   background-color: #e0b87e;
